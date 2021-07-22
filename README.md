@@ -7,9 +7,6 @@
 ## Podmiana modelu
 
 * podmień pliki w folderze public/model na pliki swojego modelu `.gltf`
-* w termianlu przedjź do folderu `public/model`
-* uruchom komendę `npx gltfjsx [twoja_nazwa_pliku].gltf` powinieneś dostać plik `[Twoja_nazwa_pliku].js`
-* w pliku `src/Model.js` podmień zawartość `return` na  `return` z wygerowanego pliku  `[Twoja_nazwa_pliku].js`
 * w pliku `src/Model.js` popraw w obu miejscach `'/model/[twoja_nazwa_pliku].gltf'`
 
 ## Budowanie projektu
