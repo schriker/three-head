@@ -10,7 +10,7 @@ function App() {
     <Canvas>
       <Suspense fallback={<Loader />}>
         <Model />
-        <Environment preset="sunset" />
+        <Environment preset="studio" />
       </Suspense>
     </Canvas>
   );

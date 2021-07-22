@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+## Instalacja
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* `git clone https://github.com/schriker/three-head.git` lub pobierz i rozpakuj kod tego repozytorium. 
+* w termianlu przejdź do foleru z kodem i uruchom `npm install`
+* po pobraniu paczek możesz uruchomić sobie projekt `npm start` i w przeglądarce domyślnie będzie dostępny pod adresem `http://localhost:3000`
 
-## Available Scripts
+## Podmiana modelu
 
-In the project directory, you can run:
+* podmień pliki w folderze public/model na pliki swojego modelu `.gltf`
+* w termianlu przedjź do folderu `public/model`
+* uruchom komendę `npx gltfjsx [twoja_nazwa_pliku].gltf` powinieneś dostać plik `[Twoja_nazwa_pliku].js`
+* w pliku `src/Model.js` podmień zawartość `return` na  `return` z wygerowanego pliku  `[Twoja_nazwa_pliku].js`
+* w pliku `src/Model.js` popraw w obu miejscach `'/model/[twoja_nazwa_pliku].gltf'`
 
-### `npm start`
+## Budowanie projektu
+* Najpierw musisz "skompilować" kod komendą `npm run build` w katalogu głównym.
+* Pliki w katalogu `build` to twoje gotowe pliki. 
+* Możesz to uruchomić przechodząc do folderu `build` i komendą `npx serve` domyślnie odpali się pod adresem `http://localhost:5000 `
+* Jeśli chcesz to dodać na istniejącą już stronę musisz dodać do niej pliki z folderu `build/static` i podlinkować w sekcji `<head>` oraz folder `build/model` a w miejscu, w którym chcesz żeby model się wyrenderował dodać `  <div id="model"></div>`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Przydatne link
+* https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
+* https://docs.pmnd.rs/react-three-fiber/getting-started/examples
+* https://github.com/pmndrs/gltfjsx
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
