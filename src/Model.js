@@ -12,11 +12,7 @@ export default function Model(props) {
 
   const { scene } = useGLTF('/model/scene.gltf');
 
-  return (
-    <group ref={group} {...props} dispose={null}>
-      <primitive object={scene} />
-    </group>
-  );
+  return <primitive ref={group} object={scene} />;
 }
 
 useGLTF.preload('/model/scene.gltf');
